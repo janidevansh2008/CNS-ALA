@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure Messaging - AES + RSA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🔐 Secure Messaging System</h1>
+            <p>AES Symmetric Encryption + RSA Asymmetric Encryption</p>
+        </header>
+
+        <!-- RSA KEY SECTION -->
+        <section class="card">
+            <h2>1. RSA Key Generation</h2>
+
+            <button id="generateKeysBtn">
+                Generate RSA Key Pair
+            </button>
+
+            <div class="status" id="keyStatus">
+                RSA keys have not been generated.
+            </div>
+        </section>
+
+        <!-- MESSAGE SECTION -->
+        <section class="card">
+            <h2>2. Enter Message</h2>
+
+            <textarea
+                id="messageInput"
+                placeholder="Enter your secret message here..."
+                rows="5"
+            ></textarea>
+
+            <button id="encryptBtn">
+                🔒 Encrypt Message
+            </button>
+        </section>
+
+        <!-- ENCRYPTION RESULT -->
+        <section class="card">
+            <h2>3. Encryption Process</h2>
+
+            <label>Original Message</label>
+            <textarea id="originalMessage" readonly></textarea>
+
+            <label>AES Key</label>
+            <textarea id="aesKeyOutput" readonly></textarea>
+
+            <label>AES Encrypted Message</label>
+            <textarea id="encryptedMessage" readonly></textarea>
+
+            <label>RSA Encrypted AES Key</label>
+            <textarea id="encryptedAESKey" readonly></textarea>
+        </section>
+
+        <!-- DECRYPTION SECTION -->
+        <section class="card">
+            <h2>4. Decryption Process</h2>
+
+            <button id="decryptBtn">
+                🔓 Decrypt Message
+            </button>
+
+            <label>RSA Decrypted AES Key</label>
+            <textarea id="decryptedAESKey" readonly></textarea>
+
+            <label>Final Decrypted Message</label>
+            <textarea id="decryptedMessage" readonly></textarea>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="card">
+            <h2>5. Encryption / Decryption Flow</h2>
+
+            <div class="flow">
+
+                <div class="flow-box">
+                    <strong>Original Message</strong>
+                    <span>↓</span>
+                </div>
+
+                <div class="flow-box aes">
+                    <strong>AES-GCM</strong>
+                    <span>↓</span>
+                </div>
+
+                <div class="flow-box">
+                    <strong>Encrypted Message</strong>
+                    <span>+</span>
+                    <strong>Encrypted AES Key</strong>
+                </div>
+
+                <div class="flow-box rsa">
+                    <strong>RSA-OAEP</strong>
+                    <span>↓</span>
+                </div>
+
+                <div class="flow-box">
+                    <strong>Decrypted Message</strong>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Secure Messaging Project | AES + RSA</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

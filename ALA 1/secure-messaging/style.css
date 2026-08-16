@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #555;
+    font-size: 16px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 18px;
+    font-size: 21px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+    resize: vertical;
+    background: #fafafa;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4c6fff;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    background: #4c6fff;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px 0 15px;
+}
+
+button:hover {
+    background: #3455d1;
+}
+
+.status {
+    padding: 12px;
+    border-radius: 7px;
+    background: #f1f3f5;
+    color: #444;
+}
+
+.flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.flow-box {
+    padding: 18px;
+    border-radius: 10px;
+    background: #e9edf5;
+    text-align: center;
+    min-width: 140px;
+}
+
+.flow-box span {
+    display: block;
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.flow-box.aes {
+    background: #e5f5e9;
+}
+
+.flow-box.rsa {
+    background: #fff1d6;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    padding: 15px;
+}
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .flow {
+        flex-direction: column;
+    }
+
+    .flow-box {
+        width: 100%;
+    }
+}
